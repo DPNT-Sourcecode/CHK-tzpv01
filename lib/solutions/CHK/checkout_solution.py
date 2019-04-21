@@ -95,19 +95,19 @@ def checkout(skus):
 	group_d=pr['X']+pr['S']+pr['T']+pr['Y']+pr['Z']
 	sum+=int(group_d/3)*45
 	if group_d>=3:
-		if group_d>=pr['Z']:
+		if (group_d-pr['Z'])>=0:
 			group_d-=pr['Z']
 			pr['Z']=0
-		if group_d>=pr['Y']:
+		if (group_d-pr['Y'])>=0:
 			group_d-=pr['Y']
 			pr['Y']=0
-		if group_d>=pr['T']:
+		if (group_d-pr['T'])>=0:
 			group_d-=pr['T']
 			pr['T']=0
-		if group_d>=pr['S']:
+		if (group_d-pr['S'])>=0:
 			group_d-=pr['S']
 			pr['S']=0
-		if group_d>=pr['X']:
+		if (group_d-pr['X'])>=0:
 			group_d-=pr['X']
 			pr['X']=0	
 	
@@ -121,5 +121,6 @@ def checkout(skus):
 	
 	
 	return sum
+
 
 
