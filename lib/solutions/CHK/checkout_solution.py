@@ -98,19 +98,19 @@ def checkout(skus):
 		if group_d>=pr['Z']:
 			group_d-=pr['Z']
 			pr['Z']=0
-		elif group_d>=pr['Y']:
+		if group_d>=pr['Y']:
 			group_d-=pr['Y']
 			pr['Y']=0
-		elif group_d>=pr['T']:
+		if group_d>=pr['T']:
 			group_d-=pr['T']
 			pr['T']=0
-		elif group_d>=pr['S']:
+		if group_d>=pr['S']:
 			group_d-=pr['S']
 			pr['S']=0
-		elif group_d>=pr['X']:
+		if group_d>=pr['X']:
 			group_d-=pr['X']
 			pr['X']=0	
-
+	
 
 	sum+=pr['X']*17
 	sum+=pr['S']*20
@@ -121,4 +121,5 @@ def checkout(skus):
 	
 	
 	return sum
+
 
