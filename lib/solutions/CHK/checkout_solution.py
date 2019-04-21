@@ -37,9 +37,11 @@ def checkout(skus):
 	sum=sum+e*40
 	
 	if (b-int(e/2))>=0:
+		b=b-int(e/2)
 		sum=sum+int(b/2)*45
 		sum=sum+int(b%2)*30
 	return sum
+
 
 
 
