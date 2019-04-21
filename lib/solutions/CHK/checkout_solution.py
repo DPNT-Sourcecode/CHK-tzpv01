@@ -54,7 +54,7 @@ def checkout(skus):
 	
 	
 	
-	sum+=pr['N']*15
+	sum+=pr['N']*40
 	if (pr['M']-int(pr['N']/3))>=0:
 		pr['M']=pr['M']-int(pr['N']/3)
 		sum+=pr['M']*15
@@ -97,6 +97,7 @@ def checkout(skus):
 	
 	
 	return sum
+
 
 
 
