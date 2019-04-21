@@ -22,14 +22,15 @@ def checkout(skus):
 	
 	sum=0
 		
-	sum=sum+(a/3)*130
-	sum=sum+(a%3)*50
+	sum=sum+int(a/3)*130
+	sum=sum+int(a%3)*50
 		
-	sum=sum+(b/2)*45
-	sum=sum+(b%2)*30
+	sum=sum+int(b/2)*45
+	sum=sum+int(b%2)*30
 			 
 	sum=sum+c*20
 	sum=sum+d*15
 	return sum
+
 
 

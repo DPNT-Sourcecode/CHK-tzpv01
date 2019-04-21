@@ -20,5 +20,6 @@ sum=sum+(b/2)*45
 sum=sum+(b%2)*30
 sum=sum+c*20
 sum=sum+d*15
-print(sum)
+print(a)
+
 
