@@ -6,7 +6,7 @@ def checkout(skus):
 	pr=[0 for i in range(len(skus))]
 	for sku in list(skus):
 		if sku.isupper():
-			pr[sku]+=1;
+			pr[sku]=pr[sku]+1;
 		else:
 			return -1;
 
@@ -97,6 +97,7 @@ def checkout(skus):
 	
 	
 	return sum
+
 
 
 
