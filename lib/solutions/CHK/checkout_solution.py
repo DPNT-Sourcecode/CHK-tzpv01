@@ -32,6 +32,3 @@ def checkout(skus):
 	sum=sum+(pr['F']-int(pr['F']/3))*10
 	return sum
 
-
-
-
