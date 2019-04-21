@@ -112,15 +112,16 @@ def checkout(skus):
 			pr['X']=0	
 
 
-	sum+=pr['X']*90
+	sum+=pr['X']*17
 	sum+=pr['S']*20
 	sum+=pr['T']*20
-	sum+=pr['Y']*10
-	sum+=pr['Z']*50
+	sum+=pr['Y']*20
+	sum+=pr['Z']*21
 
 	
 	
 	return sum
+
 
 
 
