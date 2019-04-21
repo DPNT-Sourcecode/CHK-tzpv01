@@ -9,6 +9,7 @@ def checkout(skus):
 	c=0
 	d=0
 	e=0
+	f=0
 	for sku in list(skus):
 		if sku=='A':
 			a+=1
@@ -20,6 +21,8 @@ def checkout(skus):
 			d+=1
 		elif sku=='E':
 			e+=1
+		elif sku=='F':
+			f+=1
 		else:
 			return -1
 	
@@ -40,7 +43,12 @@ def checkout(skus):
 		b=b-int(e/2)
 		sum=sum+int(b/2)*45
 		sum=sum+int(b%2)*30
+		
+	if (f-int(f/2))>=0:
+		f=f-int(f/2)
+		sum=sum+f*10
 	return sum
+
 
 
 
