@@ -19,6 +19,7 @@ def checkout(skus):
 		elif sku=='D':
 			d+=1
 		elif sku=='E':
+			e+=1
 		else:
 			return -1
 	
@@ -37,6 +38,7 @@ def checkout(skus):
 	sum=sum+e*40
 	sum=sum+int(e%2)*30
 	return sum
+
 
 
 
