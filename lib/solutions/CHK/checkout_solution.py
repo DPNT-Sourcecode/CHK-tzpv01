@@ -30,5 +30,72 @@ def checkout(skus):
 		sum=sum+int(pr['B']%2)*30
 		
 	sum=sum+(pr['F']-int(pr['F']/3))*10
+	
+	
+	sum+=pr['G']*20
+	
+	
+	
+	sum=sum+int(pr['H']/10)*80
+	pr['H']=int(pr['H']%10)
+	sum=sum+int(pr['H']/5)*45
+	sum=sum+int(pr['H']%5)*10
+	
+	sum+=pr['I']*35
+	sum+=pr['J']*60
+	
+	sum=sum+int(pr['K']/2)*150
+	sum=sum+int(pr['K']%2)*80
+	
+	
+	sum+=pr['L']*90
+	
+	
+	
+	
+	
+	sum+=pr['N']*15
+	if (pr['M']-int(pr['N']/3))>=0:
+		pr['M']=pr['M']-int(pr['N']/3)
+		sum+=pr['M']*15
+	
+	
+	sum+=pr['O']*10
+	
+	sum=sum+int(pr['P']/5)*200
+	sum=sum+int(pr['P']%5)*50
+	
+	
+	
+	sum+=pr['R']*50
+	if (pr['Q']-int(pr['R']/3))>=0:
+		pr['Q']=pr['Q']-int(pr['R']/3)
+		sum=sum+int(pr['Q']/3)*80
+		sum=sum+int(pr['Q']%3)*30
+	
+	sum+=pr['S']*30
+	sum+=pr['T']*20
+	
+	
+	
+	
+	sum=sum+(pr['U']-int(pr['U']/4))*40
+	
+	
+	
+	
+	sum=sum+int(pr['V']/3)*130
+	pr['V']=int(pr['V']%3)
+	sum=sum+int(pr['V']/2)*90
+	sum=sum+int(pr['V']%2)*50
+	
+	
+	sum+=pr['W']*20
+	sum+=pr['X']*90
+	sum+=pr['Y']*10
+	sum+=pr['Z']*50
+	
+	
 	return sum
+
 
