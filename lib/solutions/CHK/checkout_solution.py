@@ -120,7 +120,7 @@ def checkout(skus):
 		if (group_d-pr['S'])>=0:
 			group_d-=pr['S']
 			pr['S']=0
-		elif group_d>0:
+		else:
 			pr['S']-=group_d
 			group_d=0
 			
@@ -141,4 +141,5 @@ def checkout(skus):
 	
 	
 	return sum
+
 
