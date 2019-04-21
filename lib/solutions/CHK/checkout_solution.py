@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-	pr=[0 for i in range(skus.len())]
+	pr=[0 for i in range(len(skus))]
 	for sku in list(skus):
 		if sku.isupper():
 			pr[sku]+=1;
@@ -97,5 +97,6 @@ def checkout(skus):
 	
 	
 	return sum
+
 
 
