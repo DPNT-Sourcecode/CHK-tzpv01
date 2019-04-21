@@ -44,8 +44,8 @@ def checkout(skus):
 	sum+=pr['I']*35
 	sum+=pr['J']*60
 	
-	sum=sum+int(pr['K']/2)*150
-	sum=sum+int(pr['K']%2)*80
+	sum=sum+int(pr['K']/2)*120
+	sum=sum+int(pr['K']%2)*70
 	
 	
 	sum+=pr['L']*90
@@ -94,25 +94,26 @@ def checkout(skus):
 	
 	group_d=pr['X']+pr['S']+pr['T']+pr['Y']+pr['Z']
 	sum+=int(group_d/3)*45
-	if group_d>=pr['Z']:
-		group_d-=pr['Z']
-		pr['Z']=0
-	elif group_d>=pr['Y']:
-		group_d-=pr['Y']
-		pr['Y']=0
-	elif group_d>=pr['T']:
-		group_d-=pr['T']
-		pr['T']=0
-	elif group_d>=pr['S']:
-		group_d-=pr['S']
-		pr['S']=0
-	elif group_d>=pr['X']:
-		group_d-=pr['X']
-		pr['X']=0	
+	if group_d>=3:
+		if group_d>=pr['Z']:
+			group_d-=pr['Z']
+			pr['Z']=0
+		elif group_d>=pr['Y']:
+			group_d-=pr['Y']
+			pr['Y']=0
+		elif group_d>=pr['T']:
+			group_d-=pr['T']
+			pr['T']=0
+		elif group_d>=pr['S']:
+			group_d-=pr['S']
+			pr['S']=0
+		elif group_d>=pr['X']:
+			group_d-=pr['X']
+			pr['X']=0	
 
 
 	sum+=pr['X']*90
-	sum+=pr['S']*30
+	sum+=pr['S']*20
 	sum+=pr['T']*20
 	sum+=pr['Y']*10
 	sum+=pr['Z']*50
@@ -120,5 +121,6 @@ def checkout(skus):
 	
 	
 	return sum
+
 
 
