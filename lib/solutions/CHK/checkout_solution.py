@@ -73,9 +73,7 @@ def checkout(skus):
 		sum=sum+int(pr['Q']/3)*80
 		sum=sum+int(pr['Q']%3)*30
 	
-	sum+=pr['S']*30
-	sum+=pr['T']*20
-	
+
 	
 	
 	
@@ -91,10 +89,36 @@ def checkout(skus):
 	
 	
 	sum+=pr['W']*20
+	
+	
+	
+	group_d=pr['X']+pr['S']+pr['T']+pr['Y']+pr['Z']
+	sum+=int(group_d/3)*45
+	if group_d>=pr['Z']:
+		group_d-=pr['Z']
+		pr['Z']=0
+	elif group_d>=pr['Y']:
+		group_d-=pr['Y']
+		pr['Y']=0
+	elif group_d>=pr['T']:
+		group_d-=pr['T']
+		pr['T']=0
+	elif group_d>=pr['S']:
+		group_d-=pr['S']
+		pr['S']=0
+	elif group_d>=pr['X']:
+		group_d-=pr['X']
+		pr['X']=0	
+
+
 	sum+=pr['X']*90
+	sum+=pr['S']*30
+	sum+=pr['T']*20
 	sum+=pr['Y']*10
 	sum+=pr['Z']*50
+
 	
 	
 	return sum
+
 
